@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">BookEasy</string>
+    <string name="bookRoomBtn">Book Room</string>
+    <string name="text">Reserve Your Room</string>
+    <string name="checkin">Check-in Date  :</string>
+    <string name="checkout">Check-Out Date :</string>
+    <string name="input">Enter here</string>
+    <string name="pkg">Package :</string>
+    <string name="silver">Silver</string>
+    <string name="gold">Gold</string>
+    <string name="regular">Regular</string>
+    <string name="noofroom">No of Rooms :</string>
+    <string name="pref">Preferences :</string>
+    <string name="breakf">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="date">" "</string>
+    <string name="img"></string>
+    <string name="next">Next</string>
+    <string name="reserve">Confirm Your Booking</string>
+    <string name="imgs"></string>
+    <string name="inputData">Entered data Display here</string>
+    <string name="confirmRes">Check Your Reservation</string>
+    <string name="Update">Update</string>
+    <string name="confirm">Confirm</string>
+    <string name="bookList">Booking List</string>
+    <string name="resList">Your Booking Details</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="updateBooking">Update Your Booking</string>
+    <string name="roomHome">Manage Your Booking</string>
+    <string name="roomHomeBook">Make a Booking</string>
+    <string name="mngBooking">Check Your booking</string>
+    <string name="click">Click Here</string>
+    <string name="hotel">Thai Hotel</string>
+    <string name="app">BookEasy App</string>
+    <string name="table">Book Table</string>
+    <string name="back">Back</string>
+
+</resources>

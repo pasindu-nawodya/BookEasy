@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EAD5F3"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    tools:context=".bookRoom">
+
+    <ImageView
+        android:layout_width="413dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/imgs"
+        android:src="@drawable/room"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/checkinText"
+        tools:layout_editor_absoluteX="-1dp" />
+    />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:background="#00FFFDFD"
+        android:text="@string/text"
+        android:textColor="#C6FCF9F9"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/carter_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="192dp"
+        android:text="@string/checkin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/checkinText"
+        android:layout_width="139dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        android:hint="@string/input"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/checkin"
+        android:layout_width="40dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:text="@string/date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkinText"
+        app:layout_constraintStart_toEndOf="@+id/checkinText" />
+
+    <TextView
+        android:id="@+id/checkOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/checkout"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/checkoutText"
+        android:layout_width="139dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/input"
+        android:inputType="date"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkOut"
+        app:layout_constraintStart_toEndOf="@+id/checkOut" />
+
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="43dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:text="@string/date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkOut"
+        app:layout_constraintStart_toEndOf="@+id/checkoutText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/pkg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkOut" />
+
+    <RadioGroup
+        android:id="@+id/packageRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutText">
+
+        <RadioButton
+            android:id="@+id/gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gold"
+            tools:layout_editor_absoluteX="157dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+        <RadioButton
+            android:id="@+id/silver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/silver"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="259dp" />
+
+        <RadioButton
+            android:id="@+id/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regular"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="303dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/noofroom"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/noRoom"
+        android:layout_width="139dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/input"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/pref"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <CheckBox
+        android:id="@+id/breakFast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/breakf"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+    <CheckBox
+        android:id="@+id/lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:text="@string/lunch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakFast" />
+
+    <CheckBox
+        android:id="@+id/dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:text="@string/dinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="24dp"
+        android:background="#A49FC9"
+        android:onClick="confReserve"
+        android:text="@string/next"
+        android:textColor="#471547"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EAD5F3"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    tools:context=".roomBookList">
+
+    <ImageView
+        android:layout_width="413dp"
+        android:layout_height="280dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/imgs"
+        android:src="@drawable/reslist"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="136dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:background="#00FFFDFD"
+        android:text="@string/bookList"
+        android:textColor="#C6FCF9F9"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/carter_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/checkin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/checkOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/checkout"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/pkg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkOut" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/noofroom"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/pref"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="363dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="104dp"
+        android:background="#3C393D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/resList"
+        android:textAllCaps="false"
+        android:textColor="#FA0A0A0A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/amaranth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkInDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:text="@string/inputData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/checkOutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/inputData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkOut"
+        app:layout_constraintStart_toEndOf="@+id/checkOut" />
+
+    <TextView
+        android:id="@+id/packages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:text="@string/inputData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/noRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/inputData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/preference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:text="@string/inputData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/updateBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="56dp"
+        android:background="#A49FC9"
+
+        android:onClick="updateBook"
+        android:text="@string/Update"
+        android:textColor="#471547"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/delete2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:background="#A49FC9"
+        android:onClick="roomHome"
+        android:text="@string/delete"
+
+        android:textColor="#471547"
+        app:layout_constraintBaseline_toBaselineOf="@+id/updateBook"
+        app:layout_constraintStart_toEndOf="@+id/updateBook" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="?attr/homeAsUpIndicator"
+        android:onClick="roomHome"
+        android:text="@string/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

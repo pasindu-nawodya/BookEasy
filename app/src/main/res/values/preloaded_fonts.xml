@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amarante</item>
+        <item>@font/amaranth</item>
+        <item>@font/biorhyme_extrabold</item>
+        <item>@font/carter_one</item>
+        <item>@font/frijole</item>
+    </array>
+</resources>
