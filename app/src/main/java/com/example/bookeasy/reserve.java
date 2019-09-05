@@ -23,7 +23,7 @@ public class reserve extends AppCompatActivity {
         noRoom = findViewById(R.id.noRoom);
         pref = findViewById(R.id.preference);
 
-        Intent intent = new Intent();
+        Intent intent = getIntent();
 
         in_Date = intent.getStringExtra("in");
         out_Date = intent.getStringExtra("out");
