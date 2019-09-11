@@ -11,15 +11,15 @@
     <string name="regular">Regular</string>
     <string name="noofroom">No of Rooms :</string>
     <string name="pref">Preferences :</string>
-    <string name="breakf">Breakfast</string>
-    <string name="lunch">Lunch</string>
+    <string name="breakf">Breakfast and Lunch</string>
+    <string name="all">All</string>
     <string name="dinner">Dinner</string>
     <string name="date">" "</string>
     <string name="img"></string>
-    <string name="next">Next</string>
+    <string name="next">Reserve</string>
     <string name="reserve">Confirm Your Booking</string>
     <string name="imgs"></string>
-    <string name="inputData">Entered data Display here</string>
+    <string name="inputData">No Booking</string>
     <string name="confirmRes">Check Your Reservation</string>
     <string name="Update">Update</string>
     <string name="confirm">Confirm</string>
@@ -36,5 +36,6 @@
     <string name="app">BookEasy App</string>
     <string name="table">Book Table</string>
     <string name="back">Back</string>
+    <string name="selectedRadio">package</string>
 
 </resources>

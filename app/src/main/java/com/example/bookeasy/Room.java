@@ -6,9 +6,8 @@ public class Room {
     private String checkoutDate;
     private String packages;
     private String noOfRoom;
-    private String breakFast;
-    private String lunch;
-    private String dinner;
+    private String preference;
+
 
     public Room() {
     }
@@ -45,27 +44,11 @@ public class Room {
         this.noOfRoom = noOfRoom;
     }
 
-    public String isBreakFast() {
-        return breakFast;
+    public String getPreference() {
+        return preference;
     }
 
-    public void setBreakFast(String breakFast) {
-        this.breakFast = breakFast;
-    }
-
-    public String isLunch() {
-        return lunch;
-    }
-
-    public void setLunch(String lunch) {
-        this.lunch = lunch;
-    }
-
-    public String isDinner() {
-        return dinner;
-    }
-
-    public void setDinner(String dinner) {
-        this.dinner = dinner;
+    public void setPreference(String preference) {
+        this.preference = preference;
     }
 }

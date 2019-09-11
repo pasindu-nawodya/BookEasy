@@ -6,21 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-
+public class appHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_app_home);
 
     }
 
     public void roomHome(View view){
 
-        Intent homeRoom = new Intent(MainActivity.this,appHome.class);
+        Intent homeRoom = new Intent(appHome.this,roomHome.class);
         startActivity(homeRoom);
     }
-
-
 }

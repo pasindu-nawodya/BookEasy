@@ -207,49 +207,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <CheckBox
-        android:id="@+id/breakFast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:text="@string/breakf"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/textView9" />
-
-    <CheckBox
-        android:id="@+id/lunch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginLeft="168dp"
-        android:text="@string/lunch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breakFast" />
-
-    <CheckBox
-        android:id="@+id/dinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginLeft="168dp"
-        android:text="@string/dinner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lunch" />
-
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="#A49FC9"
-        android:onClick="confReserve"
         android:text="@string/next"
         android:textColor="#471547"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dinner" />
+        app:layout_constraintTop_toBottomOf="@+id/prefRadioGrp" />
+
+    <RadioGroup
+        android:id="@+id/prefRadioGrp"
+        android:layout_width="184dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/noRoom">
+
+        <RadioButton
+            android:id="@+id/BreakFast_Lunch"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/breakf" />
+
+        <RadioButton
+            android:id="@+id/Dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dinner" />
+
+        <RadioButton
+            android:id="@+id/All"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/all" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".roomHome"></activity>
+        <activity android:name=".appHome"></activity>
+        <activity android:name=".roomHome" />
         <activity android:name=".updateBooking" />
         <activity android:name=".roomBookList" />
-        <activity android:name=".reserve" />
         <activity android:name=".bookRoom" />
         <activity android:name=".MainActivity">
             <intent-filter>
