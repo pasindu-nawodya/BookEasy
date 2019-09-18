@@ -28,7 +28,7 @@ public class roomHome extends AppCompatActivity {
 
     public void MainAct(View view){
 
-        Intent main = new Intent(roomHome.this,MainActivity.class);
+        Intent main = new Intent(roomHome.this,appHome.class);
         startActivity(main);
     }
 }

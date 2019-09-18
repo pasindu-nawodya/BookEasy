@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EAD5F3"
+    tools:context=".updateBookingT">
+
+
+    <TextView
+        android:id="@+id/viewtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/time"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDate" />
+
+    <TextView
+        android:id="@+id/viewGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/urGuests"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewtime" />
+
+    <TextView
+        android:id="@+id/viewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Eventlocation"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewEvent" />
+
+    <TextView
+        android:id="@+id/viewEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/event"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGuest" />
+
+    <TextView
+        android:id="@+id/viewDate"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="204dp"
+        android:text="Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/updateBtnNextR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+
+        android:background="@drawable/roundedbtn"
+
+        android:text="@string/update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLocation" />
+
+    <Button
+        android:id="@+id/deleteBtnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:background="@drawable/roundedbtn"
+
+        android:text="@string/delete"
+        app:layout_constraintBaseline_toBaselineOf="@+id/updateBtnNextR"
+        app:layout_constraintStart_toEndOf="@+id/updateBtnNextR" />
+
+    <EditText
+        android:id="@+id/UpdateDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="date"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/UPdate" />
+
+    <EditText
+        android:id="@+id/UpdateGuest"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/UPguest"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewGuest"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/UpdateLocation"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/UPlocation"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewLocation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/UpdateEvent"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/UPevent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewEvent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/UpdateTime"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="@string/UPtime"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewtime"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="138dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

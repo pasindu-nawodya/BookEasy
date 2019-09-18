@@ -2,12 +2,12 @@ package com.example.bookeasy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void roomHome(View view){
+    public void Login(View view) {
+        Intent intent1 = new Intent(this, Login.class);
+        startActivity(intent1);
+    }
 
-        Intent homeRoom = new Intent(MainActivity.this,appHome.class);
-        startActivity(homeRoom);
+    public void Register(View view) {
+        Intent intent2 = new Intent(this, Register.class);
+        startActivity(intent2);
     }
 
 

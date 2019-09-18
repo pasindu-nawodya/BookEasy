@@ -20,4 +20,16 @@ public class appHome extends AppCompatActivity {
         Intent homeRoom = new Intent(appHome.this,roomHome.class);
         startActivity(homeRoom);
     }
+
+    public void table(View view){
+
+        Intent homeRoom = new Intent(appHome.this,start.class);
+        startActivity(homeRoom);
+    }
+
+    public void account(View view){
+
+        Intent homeRoom = new Intent(appHome.this,Profile.class);
+        startActivity(homeRoom);
+    }
 }

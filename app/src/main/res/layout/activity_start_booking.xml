@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EAD5F3"
+    tools:context=".startBooking">
+
+
+    <TextView
+        android:id="@+id/startBookingHere"
+        android:layout_width="211dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/startBk"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/startBk" />
+
+    <TextView
+        android:id="@+id/TimetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/time"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DatetextView" />
+
+    <TextView
+        android:id="@+id/DatetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="104dp"
+        android:text="Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/DateeditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="176dp"
+        android:ems="10"
+        android:hint="@string/urDate"
+        android:inputType="date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DatetextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/TimeeditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="176dp"
+        android:ems="10"
+        android:hint="@string/urTime"
+        android:inputType="time"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TimetextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/SpecialEventtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/events"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoOfGuesttextView" />
+
+    <TextView
+        android:id="@+id/NoOfGuesttextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/noGuest"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimetextView" />
+
+    <EditText
+        android:id="@+id/NoOfGuesteditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="176dp"
+        android:ems="10"
+        android:hint="@string/urGuests"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/NoOfGuesttextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/LocationtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/location"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SpecialEventtextView" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="112dp"
+
+        android:background="@drawable/roundedbtn"
+        android:onClick="startWindow"
+        android:text="@string/cancel"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LocationtextView" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+
+        android:background="@drawable/roundedbtn"
+        android:onClick="onClick"
+        android:text="@string/next"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCancel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/specialEvents"
+        android:layout_width="103dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/SpecialEventtextView"
+        app:layout_constraintStart_toEndOf="@+id/SpecialEventtextView"
+        app:layout_constraintTop_toBottomOf="@+id/SpecialEventtextView"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radioBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bday"
+            tools:layout_editor_absoluteX="124dp"
+            tools:layout_editor_absoluteY="648dp" />
+
+        <RadioButton
+            android:id="@+id/radioParty"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/party"
+            app:layout_constraintBaseline_toBaselineOf="@+id/radioBirthday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioBirthday" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/location"
+        android:layout_width="103dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/LocationtextView"
+        app:layout_constraintStart_toEndOf="@+id/LocationtextView"
+        app:layout_constraintTop_toBottomOf="@+id/LocationtextView"
+        app:layout_constraintVertical_bias="0.375">
+
+        <RadioButton
+            android:id="@+id/radioIndoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/indoor" />
+
+        <RadioButton
+            android:id="@+id/radioOutdoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/outdoor" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

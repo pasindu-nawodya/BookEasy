@@ -205,7 +205,6 @@
         android:layout_marginStart="112dp"
         android:layout_marginLeft="112dp"
         android:background="#A49FC9"
-        android:onClick="roomHome"
         android:text="@string/delete"
 
         android:textColor="#471547"
@@ -220,7 +219,7 @@
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
         android:background="?attr/homeAsUpIndicator"
-        android:onClick="roomHome"
+        android:onClick="backHome"
         android:text="@string/date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete2" />

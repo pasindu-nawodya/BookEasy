@@ -21,12 +21,41 @@
         android:id="@+id/bookRoomBtn"
         android:layout_width="148dp"
         android:layout_height="88dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="400dp"
         android:background="#A49FC9"
         android:onClick="roomHome"
         android:text="@string/bookRoomBtn"
+        android:textColor="#471547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/bookTableBtn"
+        android:layout_width="148dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="400dp"
+        android:background="#A49FC9"
+        android:onClick="table"
+        android:text="@string/bookTableBtn"
+        android:textColor="#471547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/AccountBtn"
+        android:layout_width="148dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="504dp"
+        android:background="#A49FC9"
+        android:onClick="account"
+        android:text="@string/AccountBtn"
         android:textColor="#471547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">BookEasy</string>
     <string name="bookRoomBtn">Book Room</string>
+    <string name="bookTableBtn">Book Table</string>
+    <string name="AccountBtn">Account</string>
     <string name="text">Reserve Your Room</string>
     <string name="checkin">Check-in Date  :</string>
     <string name="checkout">Check-Out Date :</string>
@@ -37,5 +39,45 @@
     <string name="table">Book Table</string>
     <string name="back">Back</string>
     <string name="selectedRadio">package</string>
+
+    //Thiwanka
+    <string name="app_name1">TableBooking</string>
+    <string name="getStart">Get Start</string>
+    <string name="startBk">Start Booking Here!</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact Number</string>
+    //date
+    <string name="time">Time</string>
+    <string name="noGuest">Number of Guests</string>
+    <string name="events">Special Events</string>
+    <string name="bday">Birthday</string>
+    <string name="party">Party</string>
+    <string name="location">Location</string>
+    <string name="indoor">Indoor</string>
+    <string name="outdoor">Outdoor</string>
+    <string name="cancel">Cancel</string>
+   //next
+    <string name="urcontact">Your Contact</string>
+    <string name="urname">Your Name</string>
+    <string name="urDate">Date</string>
+    <string name="urTime">Time</string>
+    <string name="urGuests">Number of Peoples</string>
+    <string name="youselected">You Have Selected</string>
+    <string name="confrim">Confirm</string>
+    //back
+    <string name="success">You Have Successfully Booked a Table</string>
+    <string name="home">Home</string>
+    <string name="viewBooking">View Bookings</string>
+    <string name="update">Update</string>
+    //delete
+    <string name="event">Event</string>
+    <string name="Eventlocation">Event Location</string>
+    <string name="done">done</string>
+    <string name="UPdate"></string>
+    <string name="UPtime"></string>
+    <string name="UPguest"></string>
+    <string name="UPevent"></string>
+    <string name="UPlocation"></string>
+
 
 </resources>

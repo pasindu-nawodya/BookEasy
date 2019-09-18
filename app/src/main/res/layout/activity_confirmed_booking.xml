@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EAD5F3"
+    tools:context=".confirmedBooking">
+
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="292dp"
+        android:background="@drawable/roundedbtn"
+
+        android:onClick="Home"
+        android:text="@string/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/buttonViewBooking"
+        android:layout_width="112dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/roundedbtn"
+
+        android:onClick="viewBookings"
+        android:text="@string/viewBooking"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/success"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageDone"
+        android:layout_width="138dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/done"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521"
+        app:srcCompat="@drawable/done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
