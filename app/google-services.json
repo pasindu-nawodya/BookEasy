@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1035734556733",
+    "firebase_url": "https://bookeasy-574b1.firebaseio.com",
+    "project_id": "bookeasy-574b1",
+    "storage_bucket": "bookeasy-574b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035734556733:android:f701dee187f2c630",
+        "android_client_info": {
+          "package_name": "com.example.bookeasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035734556733-312391sejpcvq4imj0fpvur7fu5jjatn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookeasy",
+            "certificate_hash": "cf5d98e90855f7af677265d6aa06822c1c6d006e"
+          }
+        },
+        {
+          "client_id": "1035734556733-prftd0sr5ob3dofog74pbkvhu5pi7o1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX7ZEg7joAKxV6UW8HpPTWTKfw0HYzerM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035734556733-prftd0sr5ob3dofog74pbkvhu5pi7o1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
