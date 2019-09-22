@@ -70,7 +70,7 @@ public class Register extends AppCompatActivity {
             email.setError("Feild can't be empty");
             name.setError("Feild can't be empty");
             password.setError("Feild can't be empty");
-            telephone.setError("Feild can't be empty");
+            telephone.setError("Feild can't be empty !");
             return false;
         }else if(!Patterns.EMAIL_ADDRESS.matcher(inputEmail).matches()){
             email.setError("Please enter a valid email address");
