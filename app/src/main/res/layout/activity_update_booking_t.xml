@@ -4,9 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2EAD5F3"
+    android:background="@drawable/bg"
     tools:context=".updateBookingT">
 
+
+    <Button
+        android:id="@+id/UDatebutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/date"
+        app:layout_constraintBottom_toBottomOf="@+id/UpdateDate"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/UTimebutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/clockx"
+        app:layout_constraintBottom_toBottomOf="@+id/UpdateTime"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/viewtime"
@@ -96,10 +116,11 @@
         android:id="@+id/UpdateDate"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:ems="10"
-        android:inputType="date"
 
+        android:inputType="date"
         app:layout_constraintBaseline_toBaselineOf="@+id/viewDate"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="@string/UPdate" />
@@ -141,7 +162,8 @@
         android:id="@+id/UpdateTime"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:ems="10"
         android:inputType="time"
         android:text="@string/UPtime"

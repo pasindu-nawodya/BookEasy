@@ -4,9 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2EAD5F3"
+    android:background="@drawable/bg"
     tools:context=".startBooking">
 
+
+    <Button
+        android:id="@+id/UTimebutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/clockx"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TimeeditText"
+        app:layout_constraintStart_toEndOf="@+id/TimeeditText" />
+
+    <Button
+        android:id="@+id/UDatebutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/date"
+        app:layout_constraintBottom_toBottomOf="@+id/DateeditText"
+        app:layout_constraintStart_toEndOf="@+id/DateeditText" />
 
     <TextView
         android:id="@+id/startBookingHere"
@@ -47,7 +66,7 @@
 
     <EditText
         android:id="@+id/DateeditText"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="176dp"
         android:ems="10"
@@ -58,7 +77,7 @@
 
     <EditText
         android:id="@+id/TimeeditText"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="176dp"
         android:ems="10"

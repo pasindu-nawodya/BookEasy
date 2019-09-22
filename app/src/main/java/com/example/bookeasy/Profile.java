@@ -35,7 +35,7 @@ public class Profile extends AppCompatActivity {
         telephone = findViewById(R.id.telephone);
         update = findViewById(R.id.save);
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("student").child("1");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Customer").child("1");
 
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -64,7 +64,7 @@ public class Profile extends AppCompatActivity {
 
             public void onClick(View v){
 
-                dbRef = FirebaseDatabase.getInstance().getReference().child("student");
+                dbRef = FirebaseDatabase.getInstance().getReference().child("Customer");
 
                 customer.setName(name.getText().toString().trim());
                 customer.setEmail(email.getText().toString().trim());
@@ -87,7 +87,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void Home(View view) {
-        Intent intent4 = new Intent(this, appHome.class);
+        Intent intent4 = new Intent(this, Login.class);
         startActivity(intent4);
     }
 }

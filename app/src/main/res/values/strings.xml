@@ -56,7 +56,7 @@
     <string name="indoor">Indoor</string>
     <string name="outdoor">Outdoor</string>
     <string name="cancel">Cancel</string>
-   //next
+    //next
     <string name="urcontact">Your Contact</string>
     <string name="urname">Your Name</string>
     <string name="urDate">Date</string>
@@ -78,6 +78,31 @@
     <string name="UPguest"></string>
     <string name="UPevent"></string>
     <string name="UPlocation"></string>
+    <string name="bTable">Book a table</string>
+    <string name="vResere">Check Reservation</string>
+    <string name="foodorder">Order Food</string>
+    <string name="orderbook">Order Food</string>
+    <string name="checkorder">Check Your Order</string>
+    <string name="orderManage">Manage Your Order</string>
+    <string name="orderurfood">Order Your Food</string>
+    <string name="foodCat">Choose Your Flavour</string>
+    <string name="burger">Burger</string>
+    <string name="sandwitch">Sandwitch</string>
+    <string name="Submarine">Submarine</string>
+    <string name="sandwich">Sandwich</string>
+    <string name="bPrice">500/-</string>
+    <string name="SanPrice">300/-</string>
+    <string name="subPrice">200/-</string>
+    <string name="qty">Quantity</string>
+    <string name="type">Type</string>
+    <string name="veg">Veg</string>
+    <string name="nonveg">Non-Veg</string>
+    <string name="olist">Order List</string>
+    <string name="fname">Food Name</string>
+    <string name="price">Price</string>
+    <string name="updateorder">Update Your Order</string>
+
+    //chamod
 
 
 </resources>

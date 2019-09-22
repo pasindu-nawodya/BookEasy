@@ -10,13 +10,14 @@
     tools:context=".updateBooking">
 
     <ImageView
-        android:layout_width="413dp"
-        android:layout_height="262dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="463dp"
+        android:layout_height="283dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/imgs"
         android:src="@drawable/update"
         app:layout_constraintBottom_toTopOf="@+id/checkinText"
-        tools:layout_editor_absoluteX="-1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     />
 
 
@@ -26,7 +27,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:background="#00FFFDFD"
@@ -36,7 +37,7 @@
         android:textStyle="bold"
         app:fontFamily="@font/carter_one"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="232dp"
         android:text="@string/checkin"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textSize="18sp"
@@ -141,7 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/checkoutText">
 
         <RadioButton
-            android:id="@+id/gold"
+            android:id="@+id/Burger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gold"
@@ -214,7 +215,7 @@
         android:layout_marginStart="172dp"
         android:layout_marginLeft="172dp"
         android:layout_marginTop="16dp"
-        android:background="#A49FC9"
+        android:background="@drawable/roundedbtn"
         android:text="@string/Update"
         android:textColor="#471547"
         android:textStyle="bold"

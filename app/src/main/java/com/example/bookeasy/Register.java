@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,24 +37,51 @@ public class Register extends AppCompatActivity {
 
             public void onClick(View v){
 
-                dbRef = FirebaseDatabase.getInstance().getReference().child("student");
+                boolean x = validateForm();
 
-                customer.setName(name.getText().toString().trim());
-                customer.setEmail(email.getText().toString().trim());
-                customer.setPassword(password.getText().toString().trim());
-                customer.setTelephone(telephone.getText().toString().trim());
+                if(x == true) {
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("Customer");
 
-                dbRef.child("1").setValue(customer);
-                Toast.makeText(Register.this, "Data Saved Successfuly", Toast.LENGTH_SHORT).show();
+                    customer.setName(name.getText().toString().trim());
+                    customer.setEmail(email.getText().toString().trim());
+                    customer.setPassword(password.getText().toString().trim());
+                    customer.setTelephone(telephone.getText().toString().trim());
 
-                Intent intent = new Intent(Register.this,Login.class);
-                startActivity(intent);
+                    dbRef.child("1").setValue(customer);
+                    Toast.makeText(Register.this, "Data Saved Successfuly", Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(Register.this, Login.class);
+                    startActivity(intent);
 
+                }
             }
 
         });
 
+    }
+    private boolean validateForm(){
+
+        String inputEmail = email.getText().toString();
+        String inputName = name.getText().toString();
+        String inputPassword = password.getText().toString();
+        String inputTelephone = telephone.getText().toString();
+
+        if(inputEmail.isEmpty() || inputName.isEmpty() || inputPassword.isEmpty() || inputTelephone.isEmpty() ){
+            email.setError("Feild can't be empty");
+            name.setError("Feild can't be empty");
+            password.setError("Feild can't be empty");
+            telephone.setError("Feild can't be empty");
+            return false;
+        }else if(!Patterns.EMAIL_ADDRESS.matcher(inputEmail).matches()){
+            email.setError("Please enter a valid email address");
+            return false;
+        }else if(!(telephone.length()==10)){
+            telephone.setError("Invalid Telephone Number");
+            return false;
+        }else{
+            email.setError(null);
+            return true;
+        }
     }
 
     public void Login(View view) {

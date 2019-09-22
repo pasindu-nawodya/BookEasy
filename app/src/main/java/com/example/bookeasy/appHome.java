@@ -23,13 +23,19 @@ public class appHome extends AppCompatActivity {
 
     public void table(View view){
 
-        Intent homeRoom = new Intent(appHome.this,start.class);
-        startActivity(homeRoom);
+        Intent homeTable = new Intent(appHome.this,start.class);
+        startActivity(homeTable);
     }
 
     public void account(View view){
 
-        Intent homeRoom = new Intent(appHome.this,Profile.class);
-        startActivity(homeRoom);
+        Intent homeAccount = new Intent(appHome.this,Profile.class);
+        startActivity(homeAccount);
+    }
+
+    public void food(View view){
+
+        Intent homeFood = new Intent(appHome.this,foodHome.class);
+        startActivity(homeFood);
     }
 }

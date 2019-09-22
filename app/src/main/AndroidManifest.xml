@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".updateBookingT"></activity>
+        <activity android:name=".foodUpdate"></activity>
+        <activity android:name=".food_list" />
+        <activity android:name=".orderFood" />
+        <activity android:name=".foodHome" />
+        <activity android:name=".updateBookingT" />
         <activity android:name=".startBooking" />
-        <activity android:name=".selectedBooking" />
         <activity android:name=".viewBookings" />
         <activity android:name=".start" />
         <activity android:name=".confirmedBooking" />

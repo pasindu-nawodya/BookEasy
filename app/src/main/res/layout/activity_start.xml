@@ -2,36 +2,75 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2EAD5F3"
     tools:context=".start">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="411dp"
-        android:layout_height="276dp"
+        android:layout_width="435dp"
+        android:layout_height="287dp"
         android:layout_marginBottom="156dp"
         app:layout_constraintBottom_toTopOf="@+id/start1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/table"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="-12dp" />
 
     <Button
         android:id="@+id/start1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="121dp"
+        android:layout_height="71dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="8dp"
-        android:onClick="startBooking"
-        android:text="@string/getStart"
         android:background="@drawable/roundedbtn"
+        android:onClick="startBooking"
+        android:text="@string/bTable"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="155dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/roundedbtn"
+        android:onClick="checkBooking"
+        android:text="@string/vResere"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start1" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginBottom="28dp"
+        android:text="Book Your Table"
+        android:textColor="#F30E0C0C"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/start1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginBottom="28dp"
+        android:text="Check Your Reservation"
+        android:textColor="#EE090808"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

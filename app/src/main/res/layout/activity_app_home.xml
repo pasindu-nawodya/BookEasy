@@ -10,36 +10,39 @@
     tools:context=".appHome">
 
     <ImageView
-        android:layout_width="413dp"
-        android:layout_height="323dp"
+        android:id="@+id/imageView9"
+        android:layout_width="439dp"
+        android:layout_height="340dp"
         android:contentDescription="@string/imgs"
         android:src="@drawable/homepage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bookRoomBtn"
-        android:layout_width="148dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="400dp"
-        android:background="#A49FC9"
+        android:layout_width="316dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/roundedbtn"
         android:onClick="roomHome"
         android:text="@string/bookRoomBtn"
         android:textColor="#471547"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/bookTableBtn"
-        android:layout_width="148dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginLeft="228dp"
-        android:layout_marginTop="400dp"
-        android:background="#A49FC9"
+        android:layout_width="316dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="516dp"
+        android:background="@drawable/roundedbtn"
         android:onClick="table"
         android:text="@string/bookTableBtn"
         android:textColor="#471547"
@@ -47,15 +50,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/AccountBtn"
-        android:layout_width="148dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="504dp"
-        android:background="#A49FC9"
-        android:onClick="account"
-        android:text="@string/AccountBtn"
+        android:id="@+id/FoodBtn"
+        android:layout_width="316dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="612dp"
+        android:background="@drawable/roundedbtn"
+        android:onClick="food"
+        android:text="@string/foodorder"
         android:textColor="#471547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -85,6 +88,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="434dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="372dp"
+        android:background="@color/colorAccent"
+        android:text="@string/UPdate"
+        app:layout_constraintBottom_toTopOf="@+id/bookRoomBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginLeft="360dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/account"
+        android:onClick="account"
+        android:text="@string/UPdate"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

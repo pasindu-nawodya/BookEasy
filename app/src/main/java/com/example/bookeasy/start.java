@@ -19,4 +19,9 @@ public class start extends AppCompatActivity {
         Intent intent = new Intent(start.this, startBooking.class);
         startActivity(intent);
     }
+
+    public void checkBooking(View view){
+        Intent intent = new Intent(start.this, viewBookings.class);
+        startActivity(intent);
+    }
 }

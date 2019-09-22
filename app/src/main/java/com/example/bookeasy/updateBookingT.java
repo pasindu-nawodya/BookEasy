@@ -3,11 +3,16 @@ package com.example.bookeasy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +21,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
+
 public class updateBookingT extends AppCompatActivity {
 
     EditText editDate,editTime,editGuest,editEvent,editLocation;
@@ -23,7 +30,14 @@ public class updateBookingT extends AppCompatActivity {
 
     Table tbl;
     Button update;
-    Button delete;
+    //Button delete;
+
+    Button delete,Datebtn,TmBtn;
+
+    Calendar c;
+    DatePickerDialog dp;
+
+    Context context = this;
 
 
     @Override
@@ -41,6 +55,13 @@ public class updateBookingT extends AppCompatActivity {
 
         update = findViewById(R.id.updateBtnNextR);
         delete = findViewById(R.id.deleteBtnNext);
+
+        Datebtn = (Button) findViewById(R.id.UDatebutton);
+        TmBtn = (Button) findViewById(R.id.UTimebutton);
+
+        Calendar calendar = Calendar.getInstance();
+        final int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        final int minute = calendar.get(Calendar.MINUTE);
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("Table").child("tbl");
         dbRef.addValueEventListener(new ValueEventListener() {
@@ -118,6 +139,48 @@ public class updateBookingT extends AppCompatActivity {
 
             }
         });
+
+        Datebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                c = Calendar.getInstance();
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+
+                dp = new DatePickerDialog(updateBookingT.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int Year, int Month, int Date) {
+
+                        editDate.setText(Date + "/" + (Month+1) + "/" + Year);
+                    }
+
+                }, day, month, year);
+
+                dp.show();
+            }
+
+
+        });
+
+        TmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                TimePickerDialog timePickerDialog = new TimePickerDialog(context, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int hour, int minute) {
+
+                        editTime.setText(hour + ":" + minute);
+                    }
+                },hour,minute, android.text.format.DateFormat.is24HourFormat(context));
+
+                timePickerDialog.show();
+            }
+        });
+
+
 
 
 

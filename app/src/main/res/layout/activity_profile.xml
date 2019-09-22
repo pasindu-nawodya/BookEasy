@@ -130,6 +130,7 @@
         android:layout_marginTop="83dp"
         android:layout_marginBottom="90dp"
         android:text="SAVE"
+        android:background="@drawable/roundedbtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/telephone" />
@@ -144,8 +145,9 @@
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="90dp"
+        android:background="@drawable/roundedbtn"
         android:onClick="Home"
-        android:text="CANCLE"
+        android:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toEndOf="@+id/save"
@@ -156,6 +158,7 @@
         android:layout_width="53dp"
         android:layout_height="44dp"
         android:layout_marginTop="24dp"
+
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:background="@drawable/pen"
@@ -188,6 +191,7 @@
         android:layout_marginBottom="90dp"
         android:onClick="Delete"
         android:text="DELETE"
+        android:background="@drawable/roundedbtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />

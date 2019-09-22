@@ -2,11 +2,13 @@ package com.example.bookeasy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -16,6 +18,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class bookRoom extends AppCompatActivity {
 
     EditText check_in,check_out,noRoom;
@@ -24,6 +28,10 @@ public class bookRoom extends AppCompatActivity {
     DatabaseReference dbRef;
     Button btn;
     Room room;
+    Button checkin,checkout;
+
+    Calendar c;
+    DatePickerDialog dp;
 
     String packType,prefType;
 
@@ -38,6 +46,61 @@ public class bookRoom extends AppCompatActivity {
         btn = findViewById(R.id.next);
         pack = findViewById(R.id.packageRadioGroup);
         pref = findViewById(R.id.prefRadioGrp);
+
+        checkin = (Button) findViewById(R.id.checkin);
+        checkout = (Button) findViewById(R.id.checkout);
+
+        Calendar calendar = Calendar.getInstance();
+
+        checkin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                c = Calendar.getInstance();
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+
+                dp = new DatePickerDialog(bookRoom.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int Year, int Month, int Date) {
+
+                        check_in.setText(Date + "/" + (Month+1) + "/" + Year);
+                    }
+
+                }, day, month, year);
+
+                dp.show();
+            }
+
+
+        });
+
+
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                c = Calendar.getInstance();
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+
+                dp = new DatePickerDialog(bookRoom.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int Year, int Month, int Date) {
+
+                        check_out.setText(Date + "/" + (Month+1) + "/" + Year);
+                    }
+
+                }, day, month, year);
+
+                dp.show();
+            }
+
+
+        });
+
 
 
         //pref Radio
@@ -99,30 +162,57 @@ public class bookRoom extends AppCompatActivity {
             }
         });
 
-        //send data to database
-        room = new Room();
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            //send data to database
+            room = new Room();
 
-                dbRef = FirebaseDatabase.getInstance().getReference().child("Room");
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-                room.setCheckinDate(check_in.getText().toString().trim());
-                room.setCheckoutDate(check_out.getText().toString().trim());
-                room.setPackages(packType.trim());
-                room.setNoOfRoom(noRoom.getText().toString().trim());
-                room.setPreference(prefType.trim());
+                    boolean check = validateForm();
 
-                dbRef.child("1").setValue(room);
-                Toast.makeText(bookRoom.this, "Reserved Successfully", Toast.LENGTH_LONG).show();
+                    if (check == true) {
 
-                Intent bookList = new Intent(bookRoom.this,roomBookList.class);
-                startActivity(bookList);
-            }
-        });
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("Room");
+
+                        room.setCheckinDate(check_in.getText().toString().trim());
+                        room.setCheckoutDate(check_out.getText().toString().trim());
+                        room.setPackages(packType.trim());
+                        room.setNoOfRoom(noRoom.getText().toString().trim());
+                        room.setPreference(prefType.trim());
+
+                        dbRef.child("1").setValue(room);
+                        Toast.makeText(bookRoom.this, "Reserved Successfully", Toast.LENGTH_LONG).show();
+
+                        Intent bookList = new Intent(bookRoom.this, roomBookList.class);
+                        startActivity(bookList);
+                    }
+
+                }
+            });
 
 
+
+
+    }
+
+    private boolean validateForm(){
+
+        String ch_in = check_in.getText().toString();
+        String ch_out = check_out.getText().toString();
+        String n_room = noRoom.getText().toString();
+
+
+        if(ch_in.isEmpty() || ch_out.isEmpty() || n_room.isEmpty()){
+            check_in.setError("Feild can't be empty");
+            check_out.setError("Feild can't be empty");
+            noRoom.setError("Feild can't be empty");
+
+            return false;
+        }else{
+            return  true;
+        }
     }
 
 }

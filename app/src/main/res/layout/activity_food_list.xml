@@ -5,37 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    android:scrollbarAlwaysDrawHorizontalTrack="true"
-    android:scrollbars="horizontal"
-    tools:context=".roomBookList">
+    tools:context=".food_list">
 
     <ImageView
         android:layout_width="449dp"
         android:layout_height="295dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="28dp"
         android:contentDescription="@string/imgs"
-        android:src="@drawable/reslist"
+        android:src="@drawable/foodburger"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/delete"
-        android:layout_width="136dp"
-        android:layout_height="28dp"
+        android:layout_width="142dp"
+        android:layout_height="41dp"
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="156dp"
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:background="#00FFFDFD"
-        android:text="@string/bookList"
+        android:text="@string/olist"
         android:textColor="#C6FCF9F9"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:fontFamily="@font/carter_one"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,10 +42,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/checkin"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/fname"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -57,10 +56,10 @@
         android:id="@+id/checkOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/checkout"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/qty"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,10 +69,10 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/pkg"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/type"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,28 +82,15 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/noofroom"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/price"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/pref"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <View
         android:id="@+id/divider"
@@ -121,10 +107,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
-        android:layout_marginTop="248dp"
-        android:text="@string/resList"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="264dp"
+        android:text="@string/checkorder"
         android:textAllCaps="false"
         android:textColor="#FA0A0A0A"
         android:textSize="20sp"
@@ -134,7 +120,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/checkInDate"
+        android:id="@+id/fname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -144,44 +130,34 @@
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/checkOutDate"
+        android:id="@+id/qty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:text="@string/inputData"
         app:layout_constraintBaseline_toBaselineOf="@+id/checkOut"
         app:layout_constraintStart_toEndOf="@+id/checkOut" />
 
     <TextView
-        android:id="@+id/packages"
+        android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
         android:text="@string/inputData"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/noRoom"
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
         android:text="@string/inputData"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/preference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:text="@string/inputData"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/textView9" />
 
     <Button
         android:id="@+id/updateBook"
@@ -190,14 +166,14 @@
         android:layout_marginStart="76dp"
         android:layout_marginLeft="76dp"
         android:layout_marginTop="72dp"
-        android:background="@drawable/roundedbtn"
 
-        android:onClick="updateBook"
+        android:background="@drawable/roundedbtn"
+        android:onClick="update"
         android:text="@string/Update"
         android:textColor="#471547"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
         android:id="@+id/delete2"
@@ -206,8 +182,9 @@
         android:layout_marginStart="112dp"
         android:layout_marginLeft="112dp"
         android:background="@drawable/roundedbtn"
-        android:text="@string/delete"
+        android:onClick="delete"
 
+        android:text="@string/delete"
         android:textColor="#471547"
         app:layout_constraintBaseline_toBaselineOf="@+id/updateBook"
         app:layout_constraintStart_toEndOf="@+id/updateBook" />
@@ -216,11 +193,11 @@
         android:id="@+id/button2"
         android:layout_width="45dp"
         android:layout_height="39dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:background="?attr/homeAsUpIndicator"
-        android:onClick="backHome"
+        android:onClick="backFHome"
         android:text="@string/date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delete2" />
