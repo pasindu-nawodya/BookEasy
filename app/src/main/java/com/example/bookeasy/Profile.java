@@ -72,7 +72,7 @@ public class Profile extends AppCompatActivity {
                 customer.setTelephone(telephone.getText().toString().trim());
 
                 dbRef.child("1").setValue(customer);
-                Toast.makeText(Profile.this, "Update Successfuly", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Profile.this, "Update Successfuly........", Toast.LENGTH_SHORT).show();
 
 
             }
